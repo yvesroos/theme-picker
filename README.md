@@ -1,6 +1,6 @@
 ## About The Project
 
-![Autocomplete theme picker](screenshot.png)
+![Autocomplete theme picker](screenshot-desktop.png)
 
 This project was made from scratch using the following stack:
 
