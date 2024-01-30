@@ -49,6 +49,8 @@ You can find how to run using `docker` in the next section since it is the most 
 
 ## Roadmap
 
+- [ ] Handle errors
+- [ ] Handle loading state during a search
 - [ ] Add unit tests on backend
 - [ ] Increase code coverage on frontend
 - [ ] Add dockerfile for dev environment
