@@ -1,0 +1,28 @@
+.nav {
+  position: absolute;
+  width: 100%;
+}
+
+.nav__list {
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  gap: calc(var(--size) * 4);
+  padding: calc(var(--size) * 4);
+}
+
+.nav__listitem {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #646cff;
+}
+
+.nav__listitem {
+  cursor: pointer;
+}
+
+.nav__listitem--active {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
