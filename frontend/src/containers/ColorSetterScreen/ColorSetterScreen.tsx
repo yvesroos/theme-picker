@@ -13,6 +13,7 @@ const ColorSetterScreen = observer(({ index }: { index: number }) => {
         values={colorBlenderStore.colors}
         onChange={colorBlenderStore.getColorsByName}
         onSelect={(value) => colorBlenderStore.setSelectedColor(index, value)}
+        onBlur={() => colorBlenderStore.resetColors()}
       />
     </BackgroundColorSection>
   );

@@ -14,11 +14,13 @@ const Autocomplete = <T,>({
   defaultSelectedValue,
   onChange,
   onSelect,
+  onBlur,
 }: {
   values?: ListItem<T>[];
   defaultSelectedValue?: ListItem<T>;
   onChange: (value: string | undefined) => void;
   onSelect: (value: ListItem<T>) => void;
+  onBlur?: () => void;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -66,6 +68,7 @@ const Autocomplete = <T,>({
     setIsFocused(false);
     setSearchValue("");
     resetHighlightIndex();
+    onBlur?.();
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {

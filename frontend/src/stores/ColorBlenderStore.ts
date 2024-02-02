@@ -23,6 +23,10 @@ export class ColorBlenderStore {
     this.selectedColors[index] = color;
   }
 
+  resetColors() {
+    this.colors = [];
+  }
+
   getColorsByName = (query: string | undefined) => {
     if (query?.length) {
       colorServiceAdapter.get(query).then((colors) => {

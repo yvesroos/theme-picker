@@ -49,6 +49,22 @@ describe("Autocomplete Component", () => {
     expect(autocompleteListEmpty).toBeInTheDocument();
   });
 
+  it("should trigger onBlur when input lose focus", () => {
+    const onBlurMock = vi.fn();
+    render(
+      <Autocomplete
+        onChange={() => {}}
+        onSelect={() => {}}
+        onBlur={onBlurMock}
+      />
+    );
+
+    const inputElement = screen.getByRole("textbox");
+    fireEvent.blur(inputElement);
+
+    expect(onBlurMock).toBeCalled();
+  });
+
   it("displays autocomplete list with not found state", () => {
     render(<Autocomplete onChange={() => {}} onSelect={() => {}} />);
 
